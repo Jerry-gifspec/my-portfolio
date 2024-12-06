@@ -6,6 +6,10 @@
   text-align: center;
   height: 100vh;
   background-color: whitesmoke;
+  background-image: url("path-to-your-background-image.jpg"); /* Add your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
 }
 
@@ -74,5 +78,12 @@ a:hover {
   .hero-container button {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }

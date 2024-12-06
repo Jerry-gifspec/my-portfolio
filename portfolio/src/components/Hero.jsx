@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
 
-const texts = ["I'm S.J Bekombe,", "From Dreams to Cod"];
+const texts = ["I'm S.J Bekombe,", "From Dreams to Code"];
 const theme = {
   primaryColor: "1e90ff", // Blue color
 };
@@ -41,47 +41,45 @@ const Hero = () => {
         {displayedText}
       </motion.h1>
 
-      <h3 style={{ color: theme.primaryColor }}>Welcome to my portfolio</h3>
-
-      <motion.button
-        whileHover={{ scale: 1.1, backgroundColor: theme.primaryColor }}
+      {/* Paragraphs for Name and Phrase */}
+      <h2
         style={{
-          backgroundColor: "#fff",
-          color: theme.primaryColor,
-          padding: "10px 20px",
-          border: "none",
-          cursor: "pointer",
+          color: "blueviolet",
+          fontSize: "24px",
+          margin: "10px 0",
         }}>
-        <a
-          href="#contact"
-          style={{
-            textDecoration: "none",
-            color: theme.primaryColor,
-            fontWeight: "bold",
-          }}>
-          Get in Touch
-        </a>
-      </motion.button>
-      {/* Email Link */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}>
-        <p style={{ fontSize: "18px", marginTop: "20px" }}>
-          You can also email me at{" "}
-          <a
-            href="mailto:youremail@example.com"
-            style={{
-              color: theme.primaryColor,
-              textDecoration: "underline",
-              fontWeight: "bold",
-            }}>
-            Enter Your Email
-          </a>
-        </p>
-      </motion.div>
+        I'm Sakwe.J Bekombe,
+      </h2>
+      <p
+        style={{
+          color: "orchid",
+          fontSize: "24px",
+          margin: "10px 0",
+        }}>
+        From Dreams to Code
+      </p>
+
+      <h1 style={{ color: theme.primaryColor }}>Welcome to my portfolio</h1>
     </div>
   );
+};
+
+// Button Styles
+const buttonStyle = {
+  backgroundColor: "#fff",
+  color: "1e90ff",
+  padding: "10px 20px",
+  border: "1px solid #1e90ff",
+  borderRadius: "5px",
+  margin: "10px",
+  cursor: "pointer",
+  textTransform: "uppercase",
+};
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "#1e90ff",
+  fontWeight: "bold",
 };
 
 export default Hero;

@@ -156,7 +156,7 @@ const Education = () => (
         />
         <h3>Hanyang University</h3>
         <p>MS in Korean Studies / International Relations</p>
-        <p>Year: 2020 - 2022</p>
+        <p>Sept: 2013 - 2016</p>
       </div>
       <div className="education-item">
         <img
@@ -166,7 +166,7 @@ const Education = () => (
         />
         <h3>University of Douala</h3>
         <p>BSc in Public Law</p>
-        <p>Year: 2016 - 2019</p>
+        <p>Oct: 2007 - 2010</p>
       </div>
     </div>
   </div>
