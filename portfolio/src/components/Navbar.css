@@ -1,0 +1,88 @@
+/* Navbar.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: skyblue;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-left li,
+.navbar-right li {
+  margin-right: 20px;
+}
+
+.navbar-left li:last-child,
+.navbar-right li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.navbar-right {
+  color: #ffffff;
+}
+
+.navbar-left a {
+  color: #ffffff;
+}
+
+.navbar-right a {
+  color: #fff;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+/* Animation for smooth entry */
+.motions.navbar {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
