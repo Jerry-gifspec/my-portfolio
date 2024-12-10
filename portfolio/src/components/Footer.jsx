@@ -4,7 +4,7 @@ import "./Footer.css"; // Assuming you want a separate CSS file
 
 const Footer = () => (
   <footer>
-    <p>Connect with me:</p>
+    <p>CONNECT WITH ME !</p>
     <div className="social-links">
       <a
         href="https://github.com/Jerry-gifspec/Jerry-gifspec.git"

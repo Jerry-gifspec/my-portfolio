@@ -9,7 +9,7 @@ const About = () => (
     initial={{ x: -100 }}
     animate={{ x: 0 }}
     transition={{ duration: 0.8 }}>
-    <h2>About Me</h2>
+    <h2>ABOUT ME</h2>
     <div className="about-content">
       {/* Profile photo */}
       <div className="profile-photo-container">

@@ -4,7 +4,7 @@ import { SiHtml5, SiCss3, SiJavascript, SiFlask } from "react-icons/si";
 import "./Skills.css";
 const Skills = () => (
   <div className="skills">
-    <h2>Skills</h2>
+    <h2>SKILLS</h2>
     <div className="skills-icons">
       <div className="icon">
         <FaReact size={40} />

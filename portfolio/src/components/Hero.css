@@ -1,3 +1,94 @@
+/* .hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  background-image: url("path-to-your-background-image.jpg"); /* Add your image */
+/* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; */
+/* } */
+
+/* button:hover {
+  background-color: #1e90ff;
+  color: #fff;
+} */
+
+/* a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+} */
+
+/* a:hover {
+  text-decoration: underline;
+} */
+/* .hero-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: inherit;
+  transition: color 0.5s ease-in-out;
+} */
+
+/* .hero-container h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: inherit;
+} */
+
+/* .hero-container .typed-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: orangered;
+} */
+
+/* .hero-container button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+} */
+
+/* .hero-container button a {
+  text-decoration: none;
+  color: inherit;
+} */
+
+/* .hero-container button:hover {
+  transform: scale(1.1);
+} */
+
+/* @media (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 2rem;
+  } */
+
+/* .hero-container h3 {
+    font-size: 1.2rem;
+  } */
+
+/* .hero-container button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  } */
+
+/* .hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  } */
+/* }  */
+
+/* General Hero Container Styles */
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -13,20 +104,7 @@
   padding: 20px;
 }
 
-button:hover {
-  background-color: #1e90ff;
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+/* Headings */
 .hero-container h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -41,12 +119,14 @@ a:hover {
   color: inherit;
 }
 
+/* Typed Text Animation */
 .hero-container .typed-text {
   font-size: 2.5rem;
   font-weight: 600;
   color: orangered;
 }
 
+/* Buttons */
 .hero-container button {
   padding: 15px 30px;
   font-size: 1rem;
@@ -64,8 +144,22 @@ a:hover {
 
 .hero-container button:hover {
   transform: scale(1.1);
+  background-color: #1e90ff;
+  color: #fff;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero-container h1 {
     font-size: 2rem;
