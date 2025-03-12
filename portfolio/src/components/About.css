@@ -1,38 +1,39 @@
 /* About Section */
-.about {
+/* .about {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: darkcyan;
+  background-color: rgb(237, 240, 240);
 }
 
-h2 {
+.about h2 {
   font-size: 2rem;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
 }
 
-/* Container for both the image and the text */
+
 .about-content {
   display: flex;
-  flex-direction: column; /* Column direction for small screens */
+  flex-direction: column; 
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin-top: 2rem;
+  width: 100%;
 }
 
-/* Profile photo container */
+
 .profile-photo-container {
   width: 150px;
   height: 150px;
   overflow: hidden;
   border-radius: 50%;
   border: 3px solid #4caf50;
-  box-shadow: 0 4px 6px rgb(red, green, blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
 }
 
@@ -42,45 +43,445 @@ h2 {
   object-fit: cover;
 }
 
-/* About text styling */
+
 .about-text {
   max-width: 600px;
   line-height: 1.6;
   font-size: 1.1rem;
-  color: white;
+  color: black;
   text-align: center;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about-tabs-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.tabs-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: blue;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-button.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.tab-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+
+.tab-content-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px hsla(24, 10%, 60%, 0.1);
+}
+
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row; 
+    text-align: left; 
+    align-items: flex-start;
+  }
+
+  .profile-photo-container {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0; 
+    margin-right: 2rem; 
+    flex-shrink: 0;
+  }
+
+  .about-text {
+    text-align: left; 
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-photo-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem; 
+  }
+
+  .about-text {
+    font-size: 1rem;
+    text-align: center; 
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .tab-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+} */
+
+/* About Section */
+.about {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* background-color: darkcyan; */
+  background-color: rgb(237, 240, 240);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background elements for depth */
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.about-blur-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 255, 255, 0.3);
+  top: -100px;
+  left: -100px;
+}
+
+.circle-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 200, 200, 0.2);
+  bottom: -150px;
+  right: -150px;
+}
+
+.circle-3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(211, 7, 7, 0.909);
+  top: 40%;
+  left: 60%;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 8px rgba(22, 21, 22, 0.888);
+  letter-spacing: 1px;
+}
+
+/* Container for both the image and the text */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile photo container with neumorphic effect */
+.profile-photo-container {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+.neomorphic-photo {
+  background: linear-gradient(145deg, #00b3b3, #009999);
+  box-shadow: 12px 12px 24px rgba(171, 15, 15, 0.936),
+    -8px -8px 20px rgba(88, 237, 240, 0.847);
+  padding: 8px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.photo-inner-shadow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.profile-photo-container:hover img {
+  transform: scale(1.12);
+}
+
+/* About tabs container */
+.about-tabs-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Tabs navigation with neumorphic effect */
+.tabs-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 139, 139, 0.5);
+  padding: 0.5rem;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.neomorphic-tabs {
+  transform: translateZ(10px);
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-button:hover::before {
+  opacity: 1;
+}
+
+.tab-button.active {
+  background: linear-gradient(145deg, #00a3a3, #008080);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+.tab-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.tab-icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* Tab content box with glass effect */
+.glass-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateZ(20px);
+  min-height: 300px;
+  transition: all 0.5s ease;
+}
+
+/* About text styling */
+.about-text {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: black;
+  text-align: left;
+}
+
+.content-paragraph {
+  margin-bottom: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.content-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* 3D hover effect for the content box */
+.tab-content-box:hover {
+  transform: translateZ(25px) rotateX(2deg);
 }
 
 /* Side-by-side layout on larger screens */
 @media (min-width: 768px) {
   .about-content {
-    flex-direction: row; /* Switch to row on larger screens */
-    text-align: left; /* Align text to the left */
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
   }
 
   /* Profile photo container on larger screens */
   .profile-photo-container {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 0; /* Remove margin on larger screens */
-    margin-right: 2rem; /* Add space between photo and text */
+    width: 220px;
+    height: 220px;
+    margin-right: 2.5rem;
+    flex-shrink: 0;
   }
 
   .about-text {
-    text-align: left; /* Align text to the left on larger screens */
+    text-align: left;
   }
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .profile-photo-container {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1rem; /* Add margin to create space between the image and text */
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1.5rem;
   }
 
   .about-text {
     font-size: 1rem;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .glass-content {
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-navigation {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    justify-content: flex-start;
+  }
+
+  .profile-photo-container {
+    width: 140px;
+    height: 140px;
   }
 }

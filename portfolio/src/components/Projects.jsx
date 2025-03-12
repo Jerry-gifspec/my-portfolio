@@ -97,6 +97,7 @@ const projects = [
 
 const Projects = () => (
   <motion.div
+    id="projects"
     className="projects"
     initial={{ scale: 0.9 }}
     animate={{ scale: 1 }}

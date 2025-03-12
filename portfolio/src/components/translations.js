@@ -1,0 +1,333 @@
+const translations = {
+  en: {
+    hero: {
+      typingPhrases: ["I'm Sakwe.J Bekombe", "From Dreams to Code"],
+      welcome: "Welcome to my portfolio",
+      description:
+        "Software Engineer |Aspiring International Relations Specialist | Agricultural Management",
+      viewWork: "View My Work",
+      getInTouch: "Get In Touch",
+      scrollDown: "Scroll Down",
+    },
+    about: {
+      title: "About Me",
+      techJourney: "Tech Journey",
+      agriculturalRoots: "Agricultural Roots",
+      uniquePerspective: "Unique Perspective",
+      techContent: [
+        "I am a passionate Software Engineer and a Freelancer, with a diverse background that blends technology with an in-depth understanding of public law, economics, and the geopolitics of the Korean Peninsula. My expertise in international relations allows me to approach problem-solving from a global perspective, while my technical skills drive innovative solutions in software development.",
+        "I thrive at the intersection of technology and strategy, delivering impactful results in complex environments. My technical expertise includes full-stack development, with a focus on creating scalable and efficient solutions.",
+      ],
+      agricultureContent: [
+        "I also have extensive experience managing our family farming business, I have overseen daily operations, resource management, and strategic planning to ensure productivity and sustainability. My role involves coordinating farm activities, optimizing crop yields, managing finances, and implementing modern agricultural practices.",
+        "Through hands-on leadership, I have contributed to the growth and success of our business while maintaining a deep connection to the land and the industry. This experience has taught me valuable lessons in resource management, sustainability, and long-term planning.",
+      ],
+      crossoverContent: [
+        "Managing a family farming business has provided me with a strong foundation in problem-solving, resource optimization, and data-driven decision-making—skills that translate seamlessly into the tech industry. In agriculture, efficiency is key, much like in software development, where optimizing processes and minimizing waste is essential.",
+        "My experience in overseeing farm operations has honed my ability to manage complex systems, analyze trends, and implement strategic solutions—similar to how developers optimize code and system performance. Additionally, working in a dynamic, ever-changing environment has strengthened my adaptability, a crucial trait in the fast-paced world of technology.",
+        "Just as farming requires careful planning, risk management, and an understanding of interdependent systems, software development demands a structured yet flexible approach to building scalable solutions. This background allows me to approach technical challenges with a unique perspective, balancing logic with innovation to create impactful solutions.",
+      ],
+    },
+    languageSwitcher: {
+      english: "English",
+      french: "French",
+      korean: "Korean",
+    },
+    skills: {
+      title: "Languages, Framworks, Tools & Skills",
+      react: "React",
+      nodejs: "Node.js",
+      javascript: "JavaScript",
+      html5: "HTML5",
+      css3: "CSS3",
+      python: "Python",
+      flask: "Flask",
+      git: "Git",
+      database: "Database",
+      sql: "SQL",
+      postgresql: "PostgreSQL",
+    },
+    contact: {
+      title: "TALK TO ME!",
+      nameLabel: "Name:",
+      namePlaceholder: "Enter your name",
+      emailLabel: "Email:",
+      emailPlaceholder: "Enter your email",
+      messageLabel: "Message:",
+      messagePlaceholder: "Write your message here...",
+      submitButton: "Send",
+      successMessage: "Message sent successfully!",
+      errorMessage: "Failed to send message. Please try again.",
+    },
+    footer: {
+      connectWithMe: "CONNECT WITH ME!",
+      github: "GitHub",
+      twitter: "Twitter",
+      linkedin: "LinkedIn",
+      resume: "Resume",
+      copyright: "@S. J bekombe. All rights reserved.",
+    },
+    navbar: {
+      home: "Home",
+      projects: {
+        title: "Projects",
+        web: "Web Development",
+        mobile: "Mobile Apps",
+        design: "Design Work",
+      },
+      skills: {
+        title: "Skills",
+        programming: "Programming",
+        design: "Design",
+        soft: "Soft Skills",
+      },
+      about: {
+        title: "About",
+        bio: "Bio",
+        experience: "Experience",
+        values: "Values",
+      },
+      education: {
+        title: "Education",
+        degrees: "Degrees",
+        certifications: "Certifications",
+        courses: "Courses",
+      },
+      contact: {
+        title: "Contact",
+        email: "Email",
+        social: "Social Media",
+        form: "Form",
+      },
+    },
+    footer: {
+      connectWithMe: "Connect with me",
+      github: "GitHub",
+      twitter: "Twitter",
+      linkedin: "LinkedIn",
+      resume: "Resume",
+      copyright: "S. J Bekombe. All rights reserved.",
+    },
+  },
+  fr: {
+    hero: {
+      typingPhrases: ["Je suis Sakwe.J Bekombe", "Des Rêves au Code"],
+      welcome: "Bienvenue sur mon portfolio",
+      description:
+        "Ingénieur Logiciel | Spécialiste en relations internationales en herbe | Gestion Agricole",
+      viewWork: "Voir Mon Travail",
+      getInTouch: "Me Contacter",
+      scrollDown: "Défiler vers le bas",
+    },
+    about: {
+      title: "À Propos de Moi",
+      techJourney: "Parcours Technique",
+      agriculturalRoots: "Racines Agricoles",
+      uniquePerspective: "Perspective Unique",
+      techContent: [
+        "Je suis un ingénieur logiciel et un Freelancer, passionné avec un parcours diversifié qui allie la technologie à une compréhension approfondie du droit public, de l'économie et de la géopolitique de la péninsule coréenne. Mon expertise en relations internationales me permet d'aborder la résolution de problèmes d'une perspective globale, tandis que mes compétences techniques favorisent des solutions innovantes en développement logiciel.",
+        "Je m'épanouis à l'intersection de la technologie et de la stratégie, offrant des résultats percutants dans des environnements complexes. Mon expertise technique comprend le développement full-stack, avec un accent sur la création de solutions évolutives et efficaces.",
+      ],
+      agricultureContent: [
+        "J'ai également une vaste expérience dans la gestion de notre entreprise agricole familiale, j'ai supervisé les opérations quotidiennes, la gestion des ressources et la planification stratégique pour assurer la productivité et la durabilité. Mon rôle implique la coordination des activités agricoles, l'optimisation des rendements des cultures, la gestion des finances et la mise en œuvre de pratiques agricoles modernes.",
+        "Grâce à un leadership pratique, j'ai contribué à la croissance et au succès de notre entreprise tout en maintenant un lien profond avec la terre et l'industrie. Cette expérience m'a enseigné de précieuses leçons en matière de gestion des ressources, de durabilité et de planification à long terme.",
+      ],
+      crossoverContent: [
+        "La gestion d'une entreprise agricole familiale m'a fourni une base solide en résolution de problèmes, en optimisation des ressources et en prise de décision basée sur les données—des compétences qui se traduisent parfaitement dans l'industrie technologique. En agriculture, l'efficacité est essentielle, tout comme en développement logiciel, où l'optimisation des processus et la minimisation des déchets sont essentielles.",
+        "Mon expérience dans la supervision des opérations agricoles a affiné ma capacité à gérer des systèmes complexes, à analyser les tendances et à mettre en œuvre des solutions stratégiques—similaire à la façon dont les développeurs optimisent le code et les performances du système. De plus, travailler dans un environnement dynamique et en constante évolution a renforcé mon adaptabilité, un trait crucial dans le monde rapide de la technologie.",
+        "Tout comme l'agriculture nécessite une planification minutieuse, une gestion des risques et une compréhension des systèmes interdépendants, le développement logiciel exige une approche structurée mais flexible pour construire des solutions évolutives. Cette expérience me permet d'aborder les défis techniques avec une perspective unique, équilibrant logique et innovation pour créer des solutions percutantes.",
+      ],
+    },
+    languageSwitcher: {
+      english: "Anglais",
+      french: "Français",
+      korean: "Coréen",
+    },
+    skills: {
+      title: " Compétence",
+      react: "React",
+      nodejs: "Node.js",
+      javascript: "JavaScript",
+      html5: "HTML5",
+      css3: "CSS3",
+      python: "Python",
+      flask: "Flask",
+      git: "Git",
+      database: "Base de données",
+      sql: "SQL",
+      postgresql: "PostgreSQL",
+    },
+    contact: {
+      title: "CONTACTEZ-MOI !",
+      nameLabel: "Nom :",
+      namePlaceholder: "Entrez votre nom",
+      emailLabel: "Email :",
+      emailPlaceholder: "Entrez votre email",
+      messageLabel: "Message :",
+      messagePlaceholder: "Écrivez votre message ici...",
+      submitButton: "Envoyer",
+      successMessage: "Message envoyé avec succès !",
+      errorMessage: "Échec de l'envoi du message. Veuillez réessayer.",
+    },
+    footer: {
+      connectWithMe: "CONNECTEZ-VOUS AVEC MOI !",
+      github: "GitHub", // Keep as is - it's a brand name
+      twitter: "Twitter", // Keep as is - it's a brand name
+      linkedin: "LinkedIn", // Keep as is - it's a brand name
+      resume: "CV", // This should be translated
+      copyright: "@S. J bekombe. Tous droits réservés.",
+    },
+    navbar: {
+      home: "Accueil",
+      projects: {
+        title: "Projets",
+        web: "Développement Web",
+        mobile: "Applications Mobiles",
+        design: "Travaux de Design",
+      },
+      contact: {
+        title: "Contact",
+        email: "Email",
+        social: "Social Media",
+        form: "Form",
+      },
+      skills: {
+        title: "Compétences",
+        programming: "Programmation",
+        design: "Design",
+        soft: "Compétences Personnelles",
+      },
+      about: {
+        title: "À Propos",
+        bio: "Biographie",
+        experience: "Expérience",
+        values: "Valeurs",
+      },
+      education: {
+        title: "Formation",
+        degrees: "Diplômes",
+        certifications: "Certifications",
+        courses: "Cours",
+      },
+    },
+    footer: {
+      connectWithMe: "Connectez-vous avec moi",
+      github: "GitHub",
+      twitter: "Twitter",
+      linkedin: "LinkedIn",
+      resume: "CV",
+      copyright: "S. J Bekombe. Tous droits réservés.",
+    },
+  },
+  ko: {
+    hero: {
+      typingPhrases: ["저는 Sakwe.J Bekombe입니다", "꿈에서 코드로"],
+      welcome: "제 포트폴리오에 오신 것을 환영합니다",
+      description: "소프트웨어 엔지니어 | 국제 관계 전문가 지망생 | 농업 경영",
+      viewWork: "작업 보기",
+      getInTouch: "연락하기",
+      scrollDown: "아래로 스크롤",
+    },
+    about: {
+      title: "자기 소개",
+      techJourney: "기술 여정",
+      agriculturalRoots: "농업 뿌리",
+      uniquePerspective: "독특한 관점",
+      techContent: [
+        "저는 공법, 경제학, 한반도 지정학에 대한 깊은 이해와 기술을 결합한 다양한 배경을 가진 열정적인 소프트웨어 엔지니어입니다. 국제 관계에 대한 전문 지식을 통해 글로벌 관점에서 문제 해결에 접근하며, 기술적 능력으로 소프트웨어 개발에서 혁신적인 솔루션을 제공합니다.",
+        "저는 기술과 전략의 교차점에서 번창하며, 복잡한 환경에서 영향력 있는 결과를 제공합니다. 제 기술적 전문 지식에는 확장 가능하고 효율적인 솔루션 생성에 중점을 둔 풀스택 개발이 포함됩니다.",
+      ],
+      agricultureContent: [
+        "또한 가족 농업 사업을 관리한 광범위한 경험이 있으며, 생산성과 지속 가능성을 보장하기 위해 일상 운영, 자원 관리 및 전략적 계획을 감독했습니다. 제 역할에는 농업 활동 조정, 작물 수확량 최적화, 재무 관리 및 현대 농업 관행 구현이 포함됩니다.",
+        "실무 리더십을 통해 토지와 산업에 대한 깊은 연결을 유지하면서 사업의 성장과 성공에 기여했습니다. 이 경험은 자원 관리, 지속 가능성 및 장기 계획에 대한 귀중한 교훈을 가르쳐 주었습니다.",
+      ],
+      crossoverContent: [
+        "가족 농업 사업을 관리하면서 문제 해결, 자원 최적화 및 데이터 기반 의사 결정에 강한 기반을 마련했습니다. 이러한 기술은 기술 산업으로 원활하게 전환됩니다. 농업에서는 효율성이 핵심이며, 소프트웨어 개발에서도 프로세스 최적화와 낭비 최소화가 필수적입니다.",
+        "농업 운영을 감독한 경험은 복잡한 시스템을 관리하고, 트렌드를 분석하며, 전략적 솔루션을 구현하는 능력을 향상시켰습니다. 이는 개발자가 코드와 시스템 성능을 최적화하는 방식과 유사합니다. 또한 역동적이고 끊임없이 변화하는 환경에서 일하면서 적응력이 강화되었습니다. 이는 빠르게 변화하는 기술 세계에서 중요한 특성입니다.",
+        "농업이 신중한 계획, 위험 관리 및 상호 의존적 시스템에 대한 이해를 필요로 하는 것처럼, 소프트웨어 개발도 확장 가능한 솔루션을 구축하기 위한 구조화되면서도 유연한 접근 방식을 요구합니다. 이러한 배경을 통해 논리와 혁신을 균형 있게 조화시켜 영향력 있는 솔루션을 만들어내는 독특한 관점으로 기술적 과제에 접근할 수 있습니다.",
+      ],
+    },
+    languageSwitcher: {
+      english: "영어",
+      french: "프랑스어",
+      korean: "한국어",
+    },
+    skills: {
+      title: "기술",
+      react: "리액트",
+      nodejs: "노드JS",
+      javascript: "자바스크립트",
+      html5: "HTML5",
+      css3: "CSS3",
+      python: "파이썬",
+      flask: "플라스크",
+      git: "깃",
+      database: "데이터베이스",
+      sql: "SQL",
+      postgresql: "PostgreSQL",
+    },
+    contact: {
+      title: "연락하세요!",
+      nameLabel: "이름:",
+      namePlaceholder: "이름을 입력하세요",
+      emailLabel: "이메일:",
+      emailPlaceholder: "이메일을 입력하세요",
+      messageLabel: "메시지:",
+      messagePlaceholder: "메시지를 여기에 작성하세요...",
+      submitButton: "보내기",
+      successMessage: "메시지가 성공적으로 전송되었습니다!",
+      errorMessage: "메시지 전송에 실패했습니다. 다시 시도해 주세요.",
+    },
+    footer: {
+      connectWithMe: "저와 연결하세요!",
+      github: "GitHub", // Keep as is - it's a brand name
+      twitter: "Twitter", // Keep as is - it's a brand name
+      linkedin: "LinkedIn", // Keep as is - it's a brand name
+      resume: "이력서", // This should be translated
+      copyright: "@S.J bekombe. 모든 권리 보유.",
+    },
+    navbar: {
+      home: "홈",
+      projects: {
+        title: "프로젝트",
+        web: "웹 개발",
+        mobile: "모바일 앱",
+        design: "디자인 작업",
+      },
+      skills: {
+        title: "기술",
+        programming: "프로그래밍",
+        design: "디자인",
+        soft: "소프트 스킬",
+      },
+      contact: {
+        title: "연락처",
+        email: "이메일",
+        social: "소셜 미디어",
+        form: "양식",
+      },
+      about: {
+        title: "소개",
+        bio: "약력",
+        experience: "경험",
+        values: "가치관",
+      },
+      education: {
+        title: "교육",
+        degrees: "학위",
+        certifications: "자격증",
+        courses: "과정",
+      },
+    },
+    footer: {
+      connectWithMe: "저와 연결하세요",
+      github: "깃허브",
+      twitter: "트위터",
+      linkedin: "링크드인",
+      resume: "이력서",
+      copyright: "S. J Bekombe. 모든 권리 보유.",
+    },
+  },
+};
+
+export default translations;
