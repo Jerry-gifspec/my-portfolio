@@ -1,127 +1,207 @@
-import React from "react";
-import { motion } from "framer-motion";
-import "./Projects.css"; // Ensure this is correctly imported
+"use client";
 
-const projects = [
-  {
-    id: 1,
-    title: "Career-Connect",
-    description: `
-      A platform designed to connect employers with job seekers. 
-      My contributions include:
-      - Developed real-time notifications using Socket.IO-client.
-      - Enhanced the Employer's Dashboard by ensuring consistent card sizes.
-      - Improved job seeker skills display with better formatting.
-    `,
-    technologies: [
-      "React",
-      "Socket.IO-client",
-      "Node.js",
-      "Flask",
-      "SQL",
-      "SaaS",
-      "HTML",
-    ],
-  },
-  {
-    id: 2,
-    title: "Student Data Management and Analytics",
-    description: `
-      A web-based application designed to streamline student data handling and provide insightful analytics. 
-      Key features include interactive dashboards and real-time data updates. 
-      
-      This project involves developing a comprehensive Student Management System using Python, aimed at streamlining 
-      the management of student data and facilitating analysis for academic performance. The application provides an 
-      intuitive interface for educators and administrators to input, manage, and analyze student information efficiently. 
-      
-      This project enhances my programming skills in Python and provides practical experience in data management and analysis. 
-      The Student Management and Analysis System serves as a valuable tool for educational institutions, enabling them to 
-      track student progress and make data-driven decisions to improve academic outcomes.
-    `,
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 3,
-    title: "Sorting Algorithms Visualizer",
-    description: `
-      An interactive tool that demonstrates sorting algorithms such as Bubble Sort, Quick Sort, and Merge Sort.
-    `,
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 4,
-    title: "Catch the Ball Game",
-    description: `
-      This project demonstrates a strong understanding of:
-      
-      - Frontend Development: Proficiency in HTML, CSS, and JavaScript to create interactive and visually appealing web applications.
-      - Game Development: Experience in game engine design, object-oriented programming, and game mechanics.
-      - Problem-Solving: Ability to break down complex problems into smaller, manageable tasks and implement effective solutions.
-      - Attention to Detail: Meticulous attention to detail in creating a polished and enjoyable gaming experience.
-    `,
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 5,
-    title: "Mobile Legal E-learning App",
-    description: `
-      Empowering Access to Justice.
-      
-      I'm excited to introduce a cutting-edge legal e-learning app designed to bridge the gap between legal knowledge and accessible justice. 
-      This innovative platform leverages the power of technology to provide users with a comprehensive and user-friendly learning experience.
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "./LanguageContext";
+import translations from "./translations";
+import "./Projects.css";
 
-      **Technical Skills Demonstrated:**
-      - Frontend Development: React, JavaScript, HTML, CSS
-      - Backend Development: Flask, Python, MySQL
-      - Real-time Communication: Node.js, WebSockets
-      - Database Management: MySQL
-      - Cloud Infrastructure: AWS, GCP (Optional)
-      - Security Best Practices: Encryption, Authentication, Authorization
+const Projects = () => {
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+  const [selectedId, setSelectedId] = useState(null);
+  const [stackedCards, setStackedCards] = useState([]);
 
-      **Impact and Benefits:**
-      - Empowering Individuals: By providing accessible legal education, we empower individuals to make informed decisions and navigate legal challenges.
-      - Promoting Legal Literacy: Our platform fosters a culture of legal awareness and understanding.
-      - Facilitating Legal Access: By connecting users with legal experts, we facilitate access to justice for all.
-    `,
-    technologies: [
-      "React Native",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Firebase",
-      "Redux Toolkit",
-      "Socket.IO",
-    ],
-  },
-];
+  // Initialize stacked cards on component mount
+  useEffect(() => {
+    // Shuffle the projects slightly for a more random stack appearance
+    const shuffled = [...t.items].sort(() => Math.random() - 0.5);
+    setStackedCards(shuffled);
+  }, [t.items]);
 
-const Projects = () => (
-  <motion.div
-    id="projects"
-    className="projects"
-    initial={{ scale: 0.9 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 0.5 }}>
-    <h2>PROJECTS</h2>
-    {projects.map((project) => (
-      <motion.div
-        key={project.id}
-        className="project-card"
-        whileHover={{ scale: 1.02 }}>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+  // Card variants for animations
+  const cardVariants = {
+    hidden: (index) => ({
+      x: -1000,
+      y: -100,
+      rotate: -90,
+      opacity: 0,
+      zIndex: 1,
+    }),
+    visible: (index) => ({
+      x: index % 2 === 0 ? -10 : 10, // Alternate slight offset
+      y: index * 5, // Stack effect
+      rotate: (index % 2 === 0 ? -1 : 1) * Math.min(index * 0.5, 3), // Slight rotation
+      opacity: 1,
+      zIndex: t.items.length - index,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: index * 0.1,
+      },
+    }),
+    hover: {
+      y: -20,
+      rotate: 0,
+      scale: 1.02,
+      zIndex: 100,
+      boxShadow: "0 20px 30px rgba(0, 0, 0, 0.2)",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      },
+    },
+    tap: {
+      scale: 0.98,
+      boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)",
+    },
+    exit: (index) => ({
+      x: 1000,
+      y: -100,
+      rotate: 90,
+      opacity: 0,
+      zIndex: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: (t.items.length - index) * 0.05,
+      },
+    }),
+    expanded: {
+      x: 0,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      zIndex: 100,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 25,
+      },
+    },
+  };
 
-        {/* Make sure technologies are displayed correctly */}
-        <div className="technologies">
-          {project.technologies.map((tech, index) => (
-            <span key={index} className="tech-badge">
-              {tech}
-            </span>
+  // Handle card click
+  const handleCardClick = (id) => {
+    setSelectedId(selectedId === id ? null : id);
+  };
+
+  // Shuffle cards animation
+  const shuffleCards = () => {
+    // Animate cards out
+    setStackedCards([]);
+
+    // After a short delay, shuffle and animate back in
+    setTimeout(() => {
+      const shuffled = [...t.items].sort(() => Math.random() - 0.5);
+      setStackedCards(shuffled);
+    }, 500);
+  };
+
+  return (
+    <div className="projects-container" id="projects">
+      <div className="cosmic-background">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
+      </div>
+
+      <motion.h2
+        className="projects-title"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+        {t.title}
+      </motion.h2>
+
+      <motion.button
+        className="shuffle-button"
+        onClick={shuffleCards}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}>
+        {t.shuffleButton}
+      </motion.button>
+
+      <div className="projects-stack">
+        <AnimatePresence mode="wait">
+          {stackedCards.map((project, index) => (
+            <motion.div
+              key={project.id}
+              className={`project-card ${
+                selectedId === project.id ? "expanded" : ""
+              }`}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              animate={selectedId === project.id ? "expanded" : "visible"}
+              exit="exit"
+              whileHover={selectedId === null ? "hover" : {}}
+              whileTap={selectedId === null ? "tap" : {}}
+              onClick={() => handleCardClick(project.id)}
+              layoutId={`project-card-${project.id}`}
+              style={{
+                backgroundColor: `hsl(${(index * 30) % 360}, 70%, 20%)`,
+                backgroundImage: `linear-gradient(135deg, 
+                  hsl(${(index * 30) % 360}, 70%, 25%) 0%, 
+                  hsl(${(index * 30 + 20) % 360}, 70%, 15%) 100%)`,
+              }}>
+              <motion.div className="card-content">
+                <motion.h3 layoutId={`project-title-${project.id}`}>
+                  {project.title}
+                </motion.h3>
+
+                {selectedId === project.id ? (
+                  <motion.div
+                    className="project-details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}>
+                    <motion.p className="project-description">
+                      {project.description}
+                    </motion.p>
+
+                    <motion.div className="technologies">
+                      {project.technologies.map((tech, techIndex) => (
+                        <motion.span
+                          key={techIndex}
+                          className="tech-badge"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 + techIndex * 0.05 }}>
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+
+                    <motion.button
+                      className="close-button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedId(null);
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}>
+                      {t.closeButton}
+                    </motion.button>
+                  </motion.div>
+                ) : (
+                  <motion.div className="card-preview">
+                    <motion.p>{project.shortDescription}</motion.p>
+                    <motion.div className="card-indicator">
+                      {t.clickToExpand}
+                    </motion.div>
+                  </motion.div>
+                )}
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
-      </motion.div>
-    ))}
-  </motion.div>
-);
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
 
 export default Projects;
