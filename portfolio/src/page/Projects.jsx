@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLanguage } from "./LanguageContext";
-import translations from "./translations";
+import { useLanguage } from "../components/LanguageContext";
+import translations from "../components/translations";
 import "./Projects.css";
 
 const Projects = () => {

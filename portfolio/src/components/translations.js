@@ -15,7 +15,7 @@ const translations = {
       agriculturalRoots: "Agricultural Roots",
       uniquePerspective: "Unique Perspective",
       techContent: [
-        "I am a passionate Software Engineer and a Freelancer, with a diverse background that blends technology with an in-depth understanding of public law, economics, and the geopolitics of the Korean Peninsula. My expertise in international relations allows me to approach problem-solving from a global perspective, while my technical skills drive innovative solutions in software development.",
+        "I am a passionate Software Engineer, a Freelancer and a consultant. With a diverse background that blends technology with an in-depth understanding of public law, economics, and the geopolitics of the Korean Peninsula. My expertise in international relations allows me to approach problem-solving from a global perspective, while my technical skills drive innovative solutions in software development.",
         "I thrive at the intersection of technology and strategy, delivering impactful results in complex environments. My technical expertise includes full-stack development, with a focus on creating scalable and efficient solutions.",
       ],
       agricultureContent: [
@@ -170,9 +170,9 @@ const translations = {
         "Visual Studio Code",
       ],
 
-      skillsBasic: "I have basic proficiency in:",
+      skillsBasic: "I have a good knowledge of:",
       frameworksTitle: "Frameworks and Libraries",
-      basicSkills: ["Flask", "Socket.IO", "Node.js", "Saas"],
+      basicSkills: ["Flask & Python", "WebSocket", "Node.js", "Saas"],
 
       softSkillsTitle: "Soft Skills",
       softSkills: [
@@ -435,7 +435,7 @@ const translations = {
       typingPhrases: ["Je suis Sakwe.J Bekombe", "Des Rêves au Code"],
       welcome: "Bienvenue sur mon portfolio",
       description:
-        "Ingénieur Logiciel | Spécialiste en politique publique en devenir | Gestion Agricole",
+        "Ingénieur Logiciel | Spécialiste en politique publique aspirant | Gestion Agricole",
       viewWork: "Voir Mon Travail",
       getInTouch: "Me Contacter",
       scrollDown: "Défiler vers le bas",
@@ -446,7 +446,7 @@ const translations = {
       agriculturalRoots: "Racines Agricoles",
       uniquePerspective: "Perspective Unique",
       techContent: [
-        "Je suis un ingénieur logiciel et un Freelancerpassionné avec un parcours diversifié qui allie la technologie à une compréhension approfondie du droit public, de l'économie et de la géopolitique de la péninsule coréenne. Mon expertise en relations internationales me permet d'aborder la résolution de problèmes d'une perspective globale, tandis que mes compétences techniques favorisent des solutions innovantes en développement logiciel.",
+        "Je suis un ingénieur logiciel  passionné , un Free-lancer et un consultant. Avec un parcours diversifié qui allie la technologie à une compréhension approfondie du droit public, de l'économie et de la géopolitique de la péninsule coréenne. Mon expertise en relations internationales me permet d'aborder la résolution de problèmes d'une perspective globale, tandis que mes compétences techniques favorisent des solutions innovantes en développement logiciel.",
         "Je m'épanouis à l'intersection de la technologie et de la stratégie, offrant des résultats percutants dans des environnements complexes. Mon expertise technique comprend le développement full-stack, avec un accent sur la création de solutions évolutives et efficaces.",
       ],
       agricultureContent: [
@@ -602,9 +602,9 @@ const translations = {
         "Visual Studio Code",
       ],
 
-      skillsBasic: "J'ai une maîtrise de base en :",
+      skillsBasic: "J'ai une bonne connaissance de :",
       frameworksTitle: "Frameworks et Bibliothèques",
-      basicSkills: ["Flask", "Socket.IO", "Node.js", "Saas"],
+      basicSkills: ["Flask & Python", "WebSocket", "Node.js", "SaaS"],
 
       softSkillsTitle: "Compétences Interpersonnelles",
       softSkills: [
@@ -750,7 +750,7 @@ const translations = {
           - Amélioration de l'affichage des compétences des chercheurs d'emploi avec un meilleur formatage.`,
           technologies: [
             "React",
-            "Socket.IO-client",
+            "WebSockets",
             "Node.js",
             "Flask",
             "SQL",
@@ -878,8 +878,8 @@ const translations = {
       agriculturalRoots: "농업 뿌리",
       uniquePerspective: "독특한 관점",
       techContent: [
-        "저는 공법, 경제학, 한반도 지정학에 대한 깊은 이해와 기술을 결합한 다양한 배경을 가진 열정적인 소프트웨어 엔지니어입니다. 국제 관계에 대한 전문 지식을 통해 글로벌 관점에서 문제 해결에 접근하며, 기술적 능력으로 소프트웨어 개발에서 혁신적인 솔루션을 제공합니다.",
-        "저는 기술과 전략의 교차점에서 번창하며, 복잡한 환경에서 영향력 있는 결과를 제공합니다. 제 기술적 전문 지식에는 확장 가능하고 효율적인 솔루션 생성에 중점을 둔 풀스택 개발이 포함됩니다.",
+        "저는 열정적인 소프트웨어 엔지니어이자, 프리랜서이며 컨설턴트입니다. 공법, 경제학 및 한반도 지정학에 대한 깊은 이해를 기술과 접목시킨 다양한 배경을 가지고 있습니다. 국제 관계에 대한 전문 지식을 통해 글로벌 관점에서 문제 해결에 접근하는 동시에, 제 기술적 역량으로 소프트웨어 개발에서 혁신적인 솔루션을 추진합니다.",
+        "저는 기술과 전략의 교차점에서 성장하며, 복잡한 환경에서 영향력 있는 결과를 제공합니다. 제 기술적 전문성은 풀스택 개발을 포함하며, 확장 가능하고 효율적인 솔루션 창출에 중점을 두고 있습니다.",
       ],
       agricultureContent: [
         "또한 가족 농업 사업을 관리한 광범위한 경험이 있으며, 생산성과 지속 가능성을 보장하기 위해 일상 운영, 자원 관리 및 전략적 계획을 감독했습니다. 제 역할에는 농업 활동 조정, 작물 수확량 최적화, 재무 관리 및 현대 농업 관행 구현이 포함됩니다.",
@@ -1032,9 +1032,9 @@ const translations = {
         "Visual Studio Code",
       ],
 
-      skillsBasic: "기본적으로 다룰 수 있는 기술:",
+      skillsBasic: "저는 다음에 대한 좋은 지식을 가지고 있습니다:",
       frameworksTitle: "프레임워크 및 라이브러리",
-      basicSkills: ["Flask", "Socket.IO", "Node.js", "Saas"],
+      basicSkills: ["Flask & 파이썬", "웹소켓", "Node.js", "SaaS"],
 
       softSkillsTitle: "소프트 스킬",
       softSkills: [

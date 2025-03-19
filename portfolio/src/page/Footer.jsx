@@ -8,9 +8,9 @@ import {
   FaFilePdf,
   FaTimes,
 } from "react-icons/fa";
-import { useLanguage } from "./LanguageContext";
-import translations from "./translations";
-import Resume from "./Resume.jsx";
+import { useLanguage } from "../components/LanguageContext.jsx";
+import translations from "../components/translations.js";
+import Resume from "../components/Resume.jsx";
 import "./Footer.css";
 
 const Footer = () => {
@@ -56,14 +56,6 @@ const Footer = () => {
           rel="noopener noreferrer">
           <FaLinkedin /> {t.linkedin}
         </a>
-        {
-          <a
-            href={resumeLinks[language]}
-            target="_blank"
-            rel="noopener noreferrer">
-            {/* <FaFilePdf /> {t.resume} (PDF) */}
-          </a>
-        }
         <button onClick={toggleResumeModal} className="view-resume-btn">
           <FaFilePdf /> {t.viewResume || "View Resume"}
         </button>

@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Code2, Leaf, Workflow } from "lucide-react";
-import { useLanguage } from "./LanguageContext";
-import translations from "./translations";
+import { useLanguage } from "../components/LanguageContext";
+import translations from "../components/translations";
 import "./About.css";
 
 export default function AboutMe() {

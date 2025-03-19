@@ -108,12 +108,10 @@ footer p:last-child {
     justify-content: center;
   }
 }
-*/
 
 /* Add these styles to your existing Footer.css */
 
- View Resume Button 
-.view-resume-btn {
+View Resume Button .view-resume-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -129,7 +127,11 @@ footer p:last-child {
 
 .view-resume-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background: linear-gradient(135deg, #fbc2eb, #fad0c4, #ff758c);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+  transform: scale(1.1);
 }
 
 /* Resume Modal */
