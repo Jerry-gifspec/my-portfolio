@@ -19,10 +19,7 @@ const Footer = () => {
   const [showResumeModal, setShowResumeModal] = useState(false);
 
   // Map language codes to different resume versions
-  const resumeLinks = {
-    // en: "/Sakwe-J.-Bekombe-FlowCV-Resume-20250306.pdf",
-    // fr: "/resume-french.md",
-  };
+  const resumeLinks = {};
 
   const toggleResumeModal = () => {
     setShowResumeModal(!showResumeModal);
