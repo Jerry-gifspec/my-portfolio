@@ -1,53 +1,409 @@
-.skills {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #1d5893;
-  color: gold;
-}
-
-.skills h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: gold;
-  margin-bottom: 30px;
-}
-
-.skills .skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.skills .skills-icons .icon {
+/* Space-Themed Skills Section */
+.space-skills-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, hsl(240, 37%, 79%), #1a1a40, #6666e7);
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  perspective: 1000px;
 }
 
-.skills .skills-icons .icon:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* Starfield Background */
+.starfield-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: 0;
 }
 
-.skills .skills-icons .icon svg {
-  color: hsla(167, 10%, 47%, 0.811);
+.stars-small,
+.stars-medium,
+.stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      1px 1px at 25% 25%,
+      white 100%,
+      transparent 100%
+    ),
+    radial-gradient(1px 1px at 50% 50%, white 100%, transparent 100%),
+    radial-gradient(1px 1px at 75% 75%, white 100%, transparent 100%),
+    radial-gradient(2px 2px at 10% 10%, white 100%, transparent 100%),
+    radial-gradient(2px 2px at 30% 70%, white 100%, transparent 100%),
+    radial-gradient(2px 2px at 60% 20%, white 100%, transparent 100%),
+    radial-gradient(2px 2px at 90% 40%, white 100%, transparent 100%);
+  background-repeat: repeat;
+  background-size: 200px 200px, 300px 300px, 400px 400px, 600px 600px,
+    500px 500px, 700px 700px, 800px 800px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+  opacity: 0.6;
 }
 
-.skills .skills-icons .icon svg:hover {
-  color: #ff6347;
-  transition: color 0.3s ease;
+.stars-medium {
+  background-size: 300px 300px, 400px 400px, 500px 500px, 700px 700px,
+    600px 600px, 800px 800px, 900px 900px;
+  animation-delay: 1s;
+  opacity: 0.4;
 }
 
-.skills .skills-icons .icon span {
-  margin-top: 10px;
+.stars-large {
+  background-size: 400px 400px, 500px 500px, 600px 600px, 800px 800px,
+    700px 700px, 900px 900px, 1000px 1000px;
+  animation-delay: 2s;
+  opacity: 0.3;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Floating Planets */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.planet-one {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #6a3093, #a044ff);
+  box-shadow: 0 0 50px #a044ff80, inset 0 0 30px #ffffff30;
+  top: 15%;
+  right: 10%;
+  animation: rotate 30s linear infinite;
+}
+
+.planet-two {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 40% 40%, #4b6cb7, #182848);
+  box-shadow: 0 0 60px #4b6cb780, inset 0 0 40px #ffffff20;
+  bottom: 10%;
+  left: 5%;
+  animation: rotate 40s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cosmic Dust */
+.cosmic-dust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      1px 1px at 10% 20%,
+      rgba(255, 255, 255, 0.1) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 30% 40%,
+      rgba(255, 255, 255, 0.1) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 50% 60%,
+      rgba(255, 255, 255, 0.1) 100%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 70% 80%,
+      rgba(255, 255, 255, 0.1) 100%,
+      transparent 100%
+    );
+  background-size: 400px 400px;
+  animation: drift 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px;
+  }
+}
+
+/* Content Container */
+.space-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.space-skills-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 4rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.title-glow {
+  position: relative;
+  display: inline-block;
+}
+
+.title-glow::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #a044ff,
+    #4b6cb7,
+    transparent
+  );
+  border-radius: 2px;
+}
+
+.space-skills-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #a044ff;
+  filter: blur(8px);
+  opacity: 0.7;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: blur(8px);
+    opacity: 0.5;
+  }
+  50% {
+    filter: blur(12px);
+    opacity: 0.8;
+  }
+}
+
+/* Skills Container */
+.space-skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Skill Item */
+.space-skill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: rgba(10, 10, 40, 0.6);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+.space-skill-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.space-skill-item:hover::before {
+  opacity: 1;
+}
+
+/* Portal Effect */
+.portal-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.portal-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  animation: expand 3s infinite;
+  opacity: 0;
+}
+
+@keyframes expand {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+
+/* Skill Icon */
+.space-skill-icon {
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 8px currentColor);
+  transition: all 0.3s ease;
+  transform: translateZ(20px);
+}
+
+.space-skill-item:hover .space-skill-icon {
+  transform: translateZ(30px) scale(1.2);
+}
+
+/* Skill Name */
+.space-skill-name {
+  font-weight: 600;
   font-size: 1rem;
-  font-weight: 500;
-  color: goldenrod;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translateZ(10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .space-skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 2rem;
+  }
+
+  .space-skills-title {
+    font-size: 2.5rem;
+  }
+
+  .planet-one {
+    width: 120px;
+    height: 120px;
+  }
+
+  .planet-two {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .space-skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .space-skill-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .space-skills-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .space-skill-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .space-skill-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .space-skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1rem;
+  }
+
+  .space-skill-item {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .space-skills-title {
+    font-size: 1.8rem;
+  }
+
+  .space-skill-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .space-skill-name {
+    font-size: 0.8rem;
+  }
+
+  .planet-one {
+    width: 80px;
+    height: 80px;
+  }
+
+  .planet-two {
+    width: 120px;
+    height: 120px;
+  }
 }
