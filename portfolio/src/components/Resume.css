@@ -1,6 +1,7 @@
 /* Resume Container */
 .resume-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 20px auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -11,9 +12,9 @@
 /* Left column styles */
 .left-column {
   flex: 5;
-  background-color: #061423d0;
-  color: #e8dddd;
-  padding: 30px;
+  background-color: #09192dd0;
+  color: rgb(244, 242, 242);
+  padding: 4px;
 }
 
 /* Right column styles */
@@ -21,7 +22,7 @@
   flex: 7;
   background-color: white;
   color: hsl(240, 24%, 6%);
-  padding: 30px;
+  padding: 4px;
 }
 
 /* Profile photo */
