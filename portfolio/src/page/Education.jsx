@@ -52,7 +52,8 @@ const Education = () => {
 
   const educationItems = [
     {
-      logo: import.meta.env.VITE_WCODING_LOGO,
+      // logo: import.meta.env.VITE_WCODING_LOGO,
+      logo: "/icon.jpeg",
       logoAlt: t.wcodingLogoAlt,
       location: t.wcodingLocation,
       degree: t.wcodingDegree,
