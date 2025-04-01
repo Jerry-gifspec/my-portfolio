@@ -1,10 +1,5 @@
 .contact {
-  background: linear-gradient(
-    135deg,
-    hsl(222, 39%, 62%),
-    hsl(9, 3%, 59%),
-    #5799ef
-  );
+  background: darkcyan;
   padding: 40px;
   border-radius: 12px;
   max-width: 600px;
@@ -18,7 +13,7 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: gold;
+  color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -30,7 +25,7 @@
 
 .contact label {
   font-weight: bold;
-  color: gold;
+  color: white;
   font-size: 1rem;
 }
 
