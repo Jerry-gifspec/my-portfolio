@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { useLanguage } from "../components/LanguageContext";
 import translations from "../components/translations";
-import "./contact.css";
+import "./Contact.css";
 
 const Contact = () => {
   const formRef = useRef();
